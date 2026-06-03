@@ -1,50 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rümeysa Atılır | Graphic Designer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rümeysa Atılır | Graphic Designer Portfolio</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background:#f3efe7;
+  background:#f4f0e8;
   color:#111;
-  overflow-x:hidden;
 }
 a{text-decoration:none;color:inherit}
-
-.cursor-bg{
-  position:fixed;
-  width:420px;
-  height:420px;
-  background:#ff4fd8;
-  border-radius:50%;
-  filter:blur(120px);
-  opacity:.35;
-  pointer-events:none;
-  z-index:-1;
-  animation:float 8s infinite alternate ease-in-out;
-}
-@keyframes float{
-  from{transform:translate(5vw,10vh)}
-  to{transform:translate(65vw,45vh)}
-}
 
 header{
   position:fixed;
   top:0;
   width:100%;
-  padding:26px 38px;
+  padding:26px 42px;
   display:flex;
   justify-content:space-between;
+  align-items:center;
   z-index:99;
-  mix-blend-mode:difference;
-  color:white;
+  background:rgba(244,240,232,.85);
+  backdrop-filter:blur(14px);
 }
-.logo{font-weight:800;font-size:22px}
+.logo{
+  font-size:22px;
+  font-weight:800;
+}
 nav a{
   margin-left:24px;
   font-size:14px;
@@ -53,123 +39,136 @@ nav a{
 
 .hero{
   min-height:100vh;
-  padding:120px 38px 60px;
+  padding:130px 42px 60px;
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
 }
 .hero small{
   font-size:18px;
-  margin-bottom:25px;
+  margin-bottom:24px;
 }
 .hero h1{
-  font-size:13vw;
-  line-height:.78;
-  letter-spacing:-10px;
+  font-size:12vw;
+  line-height:.8;
+  letter-spacing:-9px;
   text-transform:uppercase;
 }
 .hero h1 span{
-  display:block;
   font-style:italic;
   font-weight:300;
 }
-.marquee{
-  border-top:1px solid #111;
-  border-bottom:1px solid #111;
-  overflow:hidden;
-  white-space:nowrap;
-  padding:18px 0;
-  font-size:28px;
-  text-transform:uppercase;
+.hero-buttons{
+  margin-top:36px;
 }
-.marquee div{
+.btn{
   display:inline-block;
-  animation:marquee 18s linear infinite;
+  padding:15px 26px;
+  border:1px solid #111;
+  border-radius:40px;
+  margin-right:12px;
+  font-size:15px;
 }
-@keyframes marquee{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
+.btn.dark{
+  background:#111;
+  color:#f4f0e8;
 }
 
 .intro{
-  padding:90px 38px;
+  padding:90px 42px;
   display:grid;
   grid-template-columns:1fr 2fr;
-  gap:70px;
+  gap:60px;
+  border-top:1px solid #111;
 }
 .intro p{
-  font-size:38px;
-  line-height:1.12;
+  font-size:36px;
+  line-height:1.15;
   letter-spacing:-1.5px;
 }
-.highlight{
-  background:#111;
-  color:#f3efe7;
-  padding:2px 8px;
-  border-radius:40px;
+
+.section{
+  padding:90px 42px;
+}
+.section-title{
+  font-size:70px;
+  letter-spacing:-4px;
+  margin-bottom:40px;
 }
 
-.work{
-  padding:40px 38px 120px;
-}
-.work-title{
-  font-size:18px;
-  text-transform:uppercase;
-  margin-bottom:30px;
-}
-.grid{
+.services{
   display:grid;
-  grid-template-columns:repeat(12,1fr);
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+.service-card{
+  border:1px solid #111;
+  padding:34px;
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.3s;
+}
+.service-card:hover{
+  background:#111;
+  color:#f4f0e8;
+}
+.service-card span{
+  font-size:14px;
+}
+.service-card h3{
+  font-size:34px;
+  line-height:1;
+  letter-spacing:-1.5px;
+}
+
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
   gap:22px;
 }
-.project{
+.work-card{
   position:relative;
-  min-height:520px;
-  overflow:hidden;
+  min-height:420px;
   background:#111;
   color:white;
+  overflow:hidden;
   border-radius:28px;
 }
-.project:nth-child(1){grid-column:span 7}
-.project:nth-child(2){grid-column:span 5}
-.project:nth-child(3){grid-column:span 5}
-.project:nth-child(4){grid-column:span 7}
-.project:nth-child(5){grid-column:span 6}
-.project:nth-child(6){grid-column:span 6}
-
-.project img{
+.work-card img{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   object-fit:cover;
-  opacity:.75;
-  transition:.7s ease;
+  opacity:.65;
+  transition:.6s;
 }
-.project:hover img{
-  transform:scale(1.12) rotate(1deg);
-  opacity:.38;
+.work-card:hover img{
+  transform:scale(1.08);
+  opacity:.35;
 }
-.project-info{
+.work-info{
   position:absolute;
-  left:30px;
-  bottom:30px;
+  left:28px;
+  bottom:28px;
   z-index:2;
 }
-.project-info h2{
-  font-size:48px;
-  line-height:.9;
+.work-info h3{
+  font-size:40px;
+  line-height:1;
   letter-spacing:-2px;
 }
-.project-info p{
-  margin-top:12px;
+.work-info p{
+  margin-top:10px;
   font-size:15px;
 }
 .tag{
   position:absolute;
   top:24px;
   right:24px;
-  background:#f3efe7;
+  background:#f4f0e8;
   color:#111;
   padding:8px 14px;
   border-radius:30px;
@@ -177,226 +176,228 @@ nav a{
   z-index:2;
 }
 
-.statement{
-  padding:110px 38px;
+.cv-area{
   background:#111;
-  color:#f3efe7;
+  color:#f4f0e8;
+  padding:110px 42px;
 }
-.statement h2{
+.cv-area h2{
   font-size:9vw;
-  line-height:.82;
+  line-height:.85;
   letter-spacing:-7px;
-}
-.statement p{
-  margin-top:45px;
-  max-width:900px;
-  font-size:28px;
-  line-height:1.35;
-}
-
-.services{
-  padding:100px 38px;
-}
-.services h2{
-  font-size:70px;
-  letter-spacing:-4px;
   margin-bottom:35px;
 }
-.service-list{
-  border-top:1px solid #111;
+.cv-area p{
+  font-size:24px;
+  max-width:800px;
+  line-height:1.4;
+  margin-bottom:35px;
 }
-.service{
-  display:flex;
-  justify-content:space-between;
-  padding:28px 0;
-  border-bottom:1px solid #111;
-  font-size:34px;
-  letter-spacing:-1px;
-}
-.service span:last-child{
-  font-size:16px;
-  align-self:center;
+.cv-area .btn{
+  border-color:#f4f0e8;
 }
 
 .contact{
-  padding:120px 38px;
+  padding:100px 42px;
 }
 .contact h2{
-  font-size:12vw;
-  line-height:.82;
-  letter-spacing:-9px;
-  text-transform:uppercase;
+  font-size:10vw;
+  line-height:.85;
+  letter-spacing:-7px;
 }
 .contact p{
-  margin-top:30px;
-  font-size:24px;
+  margin-top:24px;
+  font-size:23px;
 }
 .contact a{
   border-bottom:2px solid #111;
 }
 
 footer{
-  padding:30px 38px;
+  padding:30px 42px;
+  border-top:1px solid #111;
   display:flex;
   justify-content:space-between;
-  border-top:1px solid #111;
   font-size:14px;
 }
 
 @media(max-width:800px){
   header{padding:20px}
-  nav a{margin-left:12px;font-size:12px}
-  .hero{padding:110px 20px 50px}
-  .hero h1{font-size:18vw;letter-spacing:-4px}
+  nav a{margin-left:10px;font-size:12px}
+  .hero{padding:120px 20px 50px}
+  .hero h1{font-size:17vw;letter-spacing:-4px}
   .intro{grid-template-columns:1fr;padding:70px 20px}
   .intro p{font-size:26px}
-  .work{padding:30px 20px 80px}
-  .grid{display:block}
-  .project{min-height:430px;margin-bottom:22px}
-  .statement,.services,.contact{padding:80px 20px}
-  .statement h2{font-size:15vw;letter-spacing:-3px}
-  .statement p{font-size:22px}
-  .services h2{font-size:48px}
-  .service{font-size:25px}
-  .contact h2{font-size:17vw;letter-spacing:-4px}
-  footer{padding:25px 20px;display:block}
+  .section{padding:70px 20px}
+  .section-title{font-size:46px}
+  .services,.work-grid{grid-template-columns:1fr}
+  .service-card h3{font-size:29px}
+  .cv-area{padding:80px 20px}
+  .cv-area h2{font-size:15vw;letter-spacing:-3px}
+  .contact{padding:80px 20px}
+  .contact h2{font-size:16vw;letter-spacing:-3px}
+  footer{display:block;padding:24px 20px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="cursor-bg"></div>
-
 <header>
   <div class="logo">Rümeysa Atılır</div>
   <nav>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <small>Independent Graphic Designer / Visual Storyteller</small>
-  <h1>Visual<br><span>Design</span><br>Studio</h1>
-</section>
+  <small>Graphic Designer / Visual Content Creator</small>
+  <h1>Creative<br><span>Visual</span><br>Design</h1>
 
-<div class="marquee">
-  <div>
-    Branding — Social Media Design — Poster Design — Visual Identity — Creative Direction — Digital Design —
-    Branding — Social Media Design — Poster Design — Visual Identity — Creative Direction — Digital Design —
+  <div class="hero-buttons">
+    <a href="#portfolio" class="btn dark">Portföyü Gör</a>
+    <a href="cv/rumeysa-atilir-cv.pdf" target="_blank" class="btn">CV İndir</a>
   </div>
-</div>
+</section>
 
 <section class="intro">
-  <div>01 / Creative Practice</div>
+  <div>01 / About</div>
   <p>
-    Rümeysa creates <span class="highlight">bold visual systems</span>
-    for brands, campaigns and digital stories with strong typography,
-    expressive layouts and memorable design language.
+    Rümeysa Atılır; ürün fotoğraf çekimleri, dijital içerik,
+    sosyal medya tasarımları, katalog çalışmaları ve yapay zeka destekli
+    görsel üretim alanlarında yaratıcı görsel çözümler üretir.
   </p>
 </section>
 
-<section class="work" id="work">
-  <div class="work-title">Selected Portfolio</div>
+<section class="section" id="services">
+  <h2 class="section-title">Hizmetler</h2>
 
-  <div class="grid">
+  <div class="services">
 
-    <div class="project">
-      <span class="tag">Branding</span>
-      <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1400&auto=format&fit=crop">
-      <div class="project-info">
-        <h2>Brand Identity</h2>
-        <p>Logo / Color System / Visual Language</p>
-      </div>
+    <div class="service-card">
+      <span>01</span>
+      <h3>Ürün Fotoğraf Çekimleri & Post-Prodüksiyon</h3>
     </div>
 
-    <div class="project">
+    <div class="service-card">
+      <span>02</span>
+      <h3>Dijital İçerik & Hareketli Tasarım</h3>
+    </div>
+
+    <div class="service-card">
+      <span>03</span>
+      <h3>Sosyal Medya İçerikleri</h3>
+    </div>
+
+    <div class="service-card">
+      <span>04</span>
+      <h3>Mağaza İçi Dijital Ekranlar</h3>
+    </div>
+
+    <div class="service-card">
+      <span>05</span>
+      <h3>Katalog & Basılı Materyaller</h3>
+    </div>
+
+    <div class="service-card">
+      <span>06</span>
+      <h3>Promosyon & Kurumsal Tasarımlar</h3>
+    </div>
+
+    <div class="service-card">
+      <span>07</span>
+      <h3>Yapay Zeka Destekli Görsel Üretim</h3>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="portfolio">
+  <h2 class="section-title">Portfolio</h2>
+
+  <div class="work-grid">
+
+    <a href="portfolio/urun-fotograf-cekimi.pdf" target="_blank" class="work-card">
+      <span class="tag">Photography</span>
+      <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=1400&auto=format&fit=crop">
+      <div class="work-info">
+        <h3>Ürün Fotoğraf Çekimleri</h3>
+        <p>Çalışmayı görüntüle</p>
+      </div>
+    </a>
+
+    <a href="portfolio/dijital-icerik.pdf" target="_blank" class="work-card">
+      <span class="tag">Motion</span>
+      <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1400&auto=format&fit=crop">
+      <div class="work-info">
+        <h3>Dijital İçerik & Hareketli Tasarım</h3>
+        <p>Çalışmayı görüntüle</p>
+      </div>
+    </a>
+
+    <a href="portfolio/sosyal-medya.pdf" target="_blank" class="work-card">
       <span class="tag">Social</span>
-      <img src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?q=80&w=1400&auto=format&fit=crop">
-      <div class="project-info">
-        <h2>Social Media</h2>
-        <p>Posts / Stories / Campaign Assets</p>
+      <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1400&auto=format&fit=crop">
+      <div class="work-info">
+        <h3>Sosyal Medya İçerikleri</h3>
+        <p>Çalışmayı görüntüle</p>
       </div>
-    </div>
+    </a>
 
-    <div class="project">
-      <span class="tag">Poster</span>
-      <img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?q=80&w=1400&auto=format&fit=crop">
-      <div class="project-info">
-        <h2>Poster Design</h2>
-        <p>Editorial / Layout / Typography</p>
+    <a href="portfolio/magaza-ekranlari.pdf" target="_blank" class="work-card">
+      <span class="tag">Digital Screens</span>
+      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1400&auto=format&fit=crop">
+      <div class="work-info">
+        <h3>Mağaza İçi Dijital Ekranlar</h3>
+        <p>Çalışmayı görüntüle</p>
       </div>
-    </div>
+    </a>
 
-    <div class="project">
-      <span class="tag">Digital</span>
+    <a href="portfolio/katalog.pdf" target="_blank" class="work-card">
+      <span class="tag">Print</span>
       <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1400&auto=format&fit=crop">
-      <div class="project-info">
-        <h2>Digital Design</h2>
-        <p>Web Visuals / Banners / Creative Assets</p>
+      <div class="work-info">
+        <h3>Katalog & Basılı Materyaller</h3>
+        <p>Çalışmayı görüntüle</p>
       </div>
-    </div>
+    </a>
 
-    <div class="project">
-      <span class="tag">Campaign</span>
-      <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=1400&auto=format&fit=crop">
-      <div class="project-info">
-        <h2>Campaign Visuals</h2>
-        <p>Creative Concepts / Advertising / Art Direction</p>
+    <a href="portfolio/kurumsal-tasarim.pdf" target="_blank" class="work-card">
+      <span class="tag">Corporate</span>
+      <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1400&auto=format&fit=crop">
+      <div class="work-info">
+        <h3>Promosyon & Kurumsal Tasarımlar</h3>
+        <p>Çalışmayı görüntüle</p>
       </div>
-    </div>
+    </a>
 
-    <div class="project">
-      <span class="tag">Identity</span>
-      <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?q=80&w=1400&auto=format&fit=crop">
-      <div class="project-info">
-        <h2>Visual Identity</h2>
-        <p>Brand Look / Design System / Graphic Language</p>
+    <a href="portfolio/ai-gorsel-uretim.pdf" target="_blank" class="work-card">
+      <span class="tag">AI Visual</span>
+      <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop">
+      <div class="work-info">
+        <h3>Yapay Zeka Destekli Görsel Üretim</h3>
+        <p>Çalışmayı görüntüle</p>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
 
-<section class="statement" id="about">
-  <h2>Design that feels clear, bold and alive.</h2>
+<section class="cv-area" id="cv">
+  <h2>CV & Portfolio</h2>
   <p>
-    Rümeysa Atılır is a graphic designer focused on branding, social media design,
-    visual identity, poster design and digital communication. Her work combines
-    strong composition, expressive typography and a clean creative direction.
+    Rümeysa Atılır’ın güncel CV dosyasını ve tasarım çalışmalarını
+    aşağıdaki bağlantıdan görüntüleyebilir veya indirebilirsiniz.
   </p>
-</section>
 
-<section class="services">
-  <h2>Services</h2>
-
-  <div class="service-list">
-    <div class="service">
-      <span>Brand Identity</span>
-      <span>Logo / Colors / Visual System</span>
-    </div>
-
-    <div class="service">
-      <span>Social Media Design</span>
-      <span>Instagram / Campaigns / Content</span>
-    </div>
-
-    <div class="service">
-      <span>Poster & Editorial</span>
-      <span>Typography / Layout / Print</span>
-    </div>
-
-    <div class="service">
-      <span>Digital Design</span>
-      <span>Banners / Web Visuals / Ads</span>
-    </div>
-  </div>
+  <a href="cv/rumeysa-atilir-cv.pdf" target="_blank" class="btn">CV Görüntüle / İndir</a>
 </section>
 
 <section class="contact" id="contact">
-  <h2>Let’s<br>create.</h2>
+  <h2>Let’s<br>Create.</h2>
   <p>Email: <a href="mailto:hello@rumeysatilir.com">hello@rumeysatilir.com</a></p>
   <p>Instagram: <a href="#">@rumeysa</a></p>
   <p>Behance: <a href="#">behance.net/rumeysa</a></p>
