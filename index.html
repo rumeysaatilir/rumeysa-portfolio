@@ -1,223 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rümeysa | Graphic Designer</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rümeysa Atılır | Graphic Designer</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-font-family:'Poppins',sans-serif;
-background:#f7f7f7;
-color:#111;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f4f1ea;
+  color:#111;
 }
+a{text-decoration:none;color:inherit}
 
 header{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-padding:20px;
-background:white;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:24px 38px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:10;
+  mix-blend-mode:difference;
+  color:white;
+}
+.logo{font-size:22px;font-weight:700}
+nav a{margin-left:24px;font-size:15px}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:end;
+  padding:120px 38px 50px;
+}
+.hero h1{
+  font-size:12vw;
+  line-height:.85;
+  letter-spacing:-8px;
+  max-width:1200px;
+}
+.hero span{
+  display:block;
+  font-style:italic;
+  font-weight:300;
 }
 
-header h1{
-font-size:70px;
-font-weight:700;
-margin-bottom:15px;
+.intro{
+  padding:80px 38px;
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:60px;
+  border-top:1px solid #111;
+}
+.intro p{
+  font-size:34px;
+  line-height:1.15;
 }
 
-header p{
-font-size:20px;
-color:#666;
-max-width:700px;
-line-height:1.7;
+.work{
+  padding:30px 38px 100px;
 }
-
-.btn{
-margin-top:30px;
-display:inline-block;
-padding:15px 35px;
-background:black;
-color:white;
-text-decoration:none;
-border-radius:50px;
-transition:0.3s;
+.work-title{
+  font-size:18px;
+  margin-bottom:25px;
+  text-transform:uppercase;
 }
-
-.btn:hover{
-background:#444;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
 }
-
-section{
-padding:100px 10%;
+.project{
+  position:relative;
+  min-height:520px;
+  overflow:hidden;
+  background:#111;
+  color:white;
+  cursor:pointer;
 }
-
-.section-title{
-font-size:40px;
-margin-bottom:50px;
-text-align:center;
+.project img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+  opacity:.78;
+  transition:.6s;
+}
+.project:hover img{
+  transform:scale(1.08);
+  opacity:.45;
+}
+.project-info{
+  position:absolute;
+  left:28px;
+  bottom:28px;
+  z-index:2;
+}
+.project-info h2{
+  font-size:42px;
+  letter-spacing:-2px;
+}
+.project-info p{
+  margin-top:8px;
+  font-size:15px;
 }
 
 .about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
+  padding:100px 38px;
+  background:#111;
+  color:#f4f1ea;
+}
+.about h2{
+  font-size:70px;
+  letter-spacing:-4px;
+  margin-bottom:35px;
+}
+.about p{
+  max-width:900px;
+  font-size:28px;
+  line-height:1.3;
 }
 
-.about img{
-width:100%;
-border-radius:20px;
+.contact{
+  padding:100px 38px;
 }
-
-.about-text p{
-line-height:1.8;
-color:#555;
+.contact h2{
+  font-size:11vw;
+  letter-spacing:-7px;
+  line-height:.9;
 }
-
-.portfolio-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+.contact p{
+  margin-top:30px;
+  font-size:24px;
 }
-
-.card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
-
-.card-content{
-padding:25px;
-}
-
-.card-content h3{
-margin-bottom:10px;
-}
-
 footer{
-padding:60px 20px;
-text-align:center;
-background:black;
-color:white;
+  padding:30px 38px;
+  border-top:1px solid #111;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
 }
 
-@media(max-width:768px){
-
-header h1{
-font-size:45px;
+@media(max-width:800px){
+  header{padding:20px}
+  nav a{margin-left:12px}
+  .hero{padding:110px 20px 40px}
+  .hero h1{font-size:18vw;letter-spacing:-4px}
+  .intro{grid-template-columns:1fr;padding:60px 20px}
+  .intro p{font-size:25px}
+  .work{padding:20px 20px 70px}
+  .grid{grid-template-columns:1fr}
+  .project{min-height:420px}
+  .about,.contact{padding:70px 20px}
+  .about h2{font-size:48px}
+  .about p{font-size:22px}
+  footer{padding:25px 20px}
 }
-
-.about{
-grid-template-columns:1fr;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Rümeysa</h1>
-<p>
-Graphic Designer & Visual Storyteller creating modern,
-minimal and impactful visual experiences.
-</p>
-
-<a href="#portfolio" class="btn">View Portfolio</a>
+  <div class="logo">Rümeysa Atılır</div>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section>
-
-<h2 class="section-title">About Me</h2>
-
-<div class="about">
-
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
-
-<div class="about-text">
-
-<p>
-I am a creative graphic designer focused on branding,
-social media design, visual identity and modern digital experiences.
-I create aesthetic and strategic designs for brands and businesses.
-</p>
-
-</div>
-
-</div>
-
+<section class="hero">
+  <h1>Graphic<br><span>Designer</span></h1>
 </section>
 
-<section id="portfolio">
+<section class="intro">
+  <div>01 / About</div>
+  <p>
+    Rümeysa creates bold, visual and memorable design systems
+    for brands, social media, digital campaigns and creative identities.
+  </p>
+</section>
 
-<h2 class="section-title">Portfolio</h2>
+<section class="work" id="work">
+  <div class="work-title">Selected Portfolio</div>
 
-<div class="portfolio-grid">
+  <div class="grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
-<div class="card-content">
-<h3>Brand Identity</h3>
-<p>Modern branding & logo design project.</p>
-</div>
-</div>
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1200&auto=format&fit=crop">
+      <div class="project-info">
+        <h2>Brand Identity</h2>
+        <p>Logo / Visual System / Creative Direction</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop">
-<div class="card-content">
-<h3>Social Media Design</h3>
-<p>Creative social media campaign visuals.</p>
-</div>
-</div>
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?q=80&w=1200&auto=format&fit=crop">
+      <div class="project-info">
+        <h2>Social Media</h2>
+        <p>Instagram Posts / Campaign Design</p>
+      </div>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
-<div class="card-content">
-<h3>Website Visual Design</h3>
-<p>Minimal and elegant website visuals.</p>
-</div>
-</div>
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?q=80&w=1200&auto=format&fit=crop">
+      <div class="project-info">
+        <h2>Poster Design</h2>
+        <p>Editorial / Typography / Layout</p>
+      </div>
+    </div>
 
-</div>
+    <div class="project">
+      <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1200&auto=format&fit=crop">
+      <div class="project-info">
+        <h2>Digital Design</h2>
+        <p>Web Visuals / Creative Assets</p>
+      </div>
+    </div>
 
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>Design with feeling, structure and visual impact.</h2>
+  <p>
+    Rümeysa focuses on graphic design, branding, visual identity,
+    social media content design and digital communication. Her work combines
+    clean composition, strong typography and creative visual storytelling.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Let’s create something visual.</h2>
+  <p>Instagram: @rumeysa</p>
+  <p>Email: hello@rumeysatilir.com</p>
 </section>
 
 <footer>
-
-<h2>Let's Work Together</h2>
-
-<p style="margin-top:15px;">
-Instagram: @rumeysa
-</p>
-
+  <span>© 2026 Rümeysa Atılır</span>
+  <span>Graphic Designer Portfolio</span>
 </footer>
 
 </body>
