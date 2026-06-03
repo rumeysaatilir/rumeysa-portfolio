@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rümeysa Atılır | Graphic Designer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 *{
@@ -18,7 +20,7 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:'Space Grotesk',sans-serif;
 background:#f4f0e8;
 color:#111;
 overflow-x:hidden;
@@ -39,19 +41,21 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:99;
-background:rgba(244,240,232,.8);
+background:rgba(244,240,232,.82);
 backdrop-filter:blur(14px);
 }
 
 .logo{
 font-size:22px;
-font-weight:800;
+font-weight:700;
+letter-spacing:-1px;
 }
 
 nav a{
 margin-left:24px;
 font-size:14px;
 text-transform:uppercase;
+letter-spacing:.5px;
 }
 
 .hero{
@@ -65,18 +69,22 @@ justify-content:flex-end;
 .hero small{
 font-size:18px;
 margin-bottom:25px;
+text-transform:uppercase;
+letter-spacing:.5px;
 }
 
 .hero h1{
+font-family:'Playfair Display',serif;
 font-size:12vw;
-line-height:.8;
-letter-spacing:-9px;
+line-height:.78;
+letter-spacing:-8px;
 text-transform:uppercase;
+font-weight:600;
 }
 
 .hero h1 span{
 font-style:italic;
-font-weight:300;
+font-weight:500;
 }
 
 .hero-buttons{
@@ -104,6 +112,27 @@ color:#f4f0e8;
 transform:translateY(-3px);
 }
 
+.marquee{
+border-top:1px solid #111;
+border-bottom:1px solid #111;
+overflow:hidden;
+white-space:nowrap;
+padding:16px 0;
+font-size:24px;
+text-transform:uppercase;
+letter-spacing:-1px;
+}
+
+.marquee div{
+display:inline-block;
+animation:marquee 18s linear infinite;
+}
+
+@keyframes marquee{
+from{transform:translateX(0)}
+to{transform:translateX(-50%)}
+}
+
 .intro{
 padding:90px 42px;
 display:grid;
@@ -112,9 +141,16 @@ gap:60px;
 border-top:1px solid #111;
 }
 
+.intro div{
+font-size:15px;
+text-transform:uppercase;
+letter-spacing:.5px;
+}
+
 .intro p{
-font-size:38px;
-line-height:1.15;
+font-family:'Playfair Display',serif;
+font-size:42px;
+line-height:1.12;
 letter-spacing:-1.5px;
 }
 
@@ -125,7 +161,14 @@ padding:40px 42px 120px;
 .work-title{
 font-size:18px;
 text-transform:uppercase;
-margin-bottom:30px;
+margin-bottom:12px;
+}
+
+.work-subtitle{
+max-width:780px;
+font-size:24px;
+line-height:1.25;
+margin-bottom:32px;
 }
 
 .grid{
@@ -152,19 +195,7 @@ grid-column:span 5;
 }
 
 .project:nth-child(3){
-grid-column:span 5;
-}
-
-.project:nth-child(4){
-grid-column:span 7;
-}
-
-.project:nth-child(5){
-grid-column:span 6;
-}
-
-.project:nth-child(6){
-grid-column:span 6;
+grid-column:span 12;
 }
 
 .project img{
@@ -173,13 +204,13 @@ inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
-opacity:.72;
+opacity:.7;
 transition:.7s;
 }
 
 .project:hover img{
-transform:scale(1.08);
-opacity:.38;
+transform:scale(1.08) rotate(1deg);
+opacity:.34;
 }
 
 .project-info{
@@ -190,14 +221,18 @@ z-index:2;
 }
 
 .project-info h2{
-font-size:48px;
+font-family:'Playfair Display',serif;
+font-size:52px;
 line-height:.9;
 letter-spacing:-2px;
+font-weight:600;
 }
 
 .project-info p{
 margin-top:12px;
 font-size:15px;
+text-transform:uppercase;
+letter-spacing:.5px;
 }
 
 .tag{
@@ -210,6 +245,7 @@ padding:8px 14px;
 border-radius:30px;
 font-size:12px;
 z-index:2;
+text-transform:uppercase;
 }
 
 .contact{
@@ -218,10 +254,12 @@ border-top:1px solid #111;
 }
 
 .contact h2{
+font-family:'Playfair Display',serif;
 font-size:10vw;
 line-height:.82;
-letter-spacing:-7px;
+letter-spacing:-6px;
 text-transform:uppercase;
+font-weight:600;
 }
 
 .contact p{
@@ -247,6 +285,10 @@ header{
 padding:20px;
 }
 
+.logo{
+font-size:19px;
+}
+
 nav a{
 margin-left:12px;
 font-size:12px;
@@ -261,17 +303,25 @@ font-size:18vw;
 letter-spacing:-4px;
 }
 
+.marquee{
+font-size:18px;
+}
+
 .intro{
 grid-template-columns:1fr;
 padding:70px 20px;
 }
 
 .intro p{
-font-size:26px;
+font-size:31px;
 }
 
 .work{
 padding:30px 20px 80px;
+}
+
+.work-subtitle{
+font-size:20px;
 }
 
 .grid{
@@ -281,6 +331,10 @@ display:block;
 .project{
 min-height:420px;
 margin-bottom:22px;
+}
+
+.project-info h2{
+font-size:40px;
 }
 
 .contact{
@@ -343,6 +397,16 @@ View CV
 
 </section>
 
+<div class="marquee">
+
+<div>
+Social Media — Digital Content — AI Visual Design —
+Social Media — Digital Content — AI Visual Design —
+Social Media — Digital Content — AI Visual Design —
+</div>
+
+</div>
+
 <section class="intro">
 
 <div>
@@ -350,9 +414,8 @@ View CV
 </div>
 
 <p>
-Rümeysa Atılır creates visual experiences through branding,
-social media design, digital content, campaign visuals,
-AI-supported creative production and modern graphic systems.
+Rümeysa Atılır creates visual experiences through social media design,
+digital content production and AI-supported creative visual systems.
 </p>
 
 </section>
@@ -363,37 +426,12 @@ AI-supported creative production and modern graphic systems.
 Selected Portfolio
 </div>
 
+<p class="work-subtitle">
+A curated collection of social media designs,
+digital content projects and AI-supported visual productions.
+</p>
+
 <div class="grid">
-
-<a href="portfolio/urun-fotograf-cekimi.pdf" target="_blank" class="project">
-
-<span class="tag">
-Photography
-</span>
-
-<img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=1400&auto=format&fit=crop">
-
-<div class="project-info">
-<h2>Ürün Fotoğraf Çekimleri</h2>
-<p>View Project</p>
-</div>
-
-</a>
-
-<a href="portfolio/dijital-icerik.pdf" target="_blank" class="project">
-
-<span class="tag">
-Motion
-</span>
-
-<img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1400&auto=format&fit=crop">
-
-<div class="project-info">
-<h2>Dijital İçerik</h2>
-<p>View Project</p>
-</div>
-
-</a>
 
 <a href="portfolio/sosyal-medya.pdf" target="_blank" class="project">
 
@@ -410,31 +448,16 @@ Social Media
 
 </a>
 
-<a href="portfolio/magaza-ekranlari.pdf" target="_blank" class="project">
+<a href="portfolio/dijital-icerik.pdf" target="_blank" class="project">
 
 <span class="tag">
-Digital Screens
+Digital Content
 </span>
 
-<img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1400&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1400&auto=format&fit=crop">
 
 <div class="project-info">
-<h2>Mağaza İçi Ekranlar</h2>
-<p>View Project</p>
-</div>
-
-</a>
-
-<a href="portfolio/katalog.pdf" target="_blank" class="project">
-
-<span class="tag">
-Print
-</span>
-
-<img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=1400&auto=format&fit=crop">
-
-<div class="project-info">
-<h2>Katalog Tasarımları</h2>
+<h2>Dijital İçerik</h2>
 <p>View Project</p>
 </div>
 
