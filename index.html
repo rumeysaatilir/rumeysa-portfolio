@@ -34,8 +34,17 @@ animation:hideLoader 1.8s forwards;
 
 .loader h1{
 font-family:'Playfair Display',serif;
-font-size:6vw;
+font-size:7vw;
 letter-spacing:-3px;
+background:linear-gradient(90deg,#ff4fd8,#7c5cff,#00d4ff,#f4f0e8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:pulseText 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseText{
+from{transform:scale(1);filter:blur(0)}
+to{transform:scale(1.05);filter:blur(.5px)}
 }
 
 @keyframes hideLoader{
@@ -186,12 +195,19 @@ grid-template-columns:repeat(4,1fr);
 gap:16px;
 }
 
-.selected-list div{
+.selected-list a{
 border:1px solid #f4f0e8;
 border-radius:40px;
 padding:15px 20px;
 text-align:center;
 font-size:15px;
+transition:.3s;
+}
+
+.selected-list a:hover{
+background:#f4f0e8;
+color:#111;
+transform:translateY(-3px);
 }
 
 .work{
@@ -219,20 +235,13 @@ gap:22px;
 
 .project{
 position:relative;
-min-height:520px;
+min-height:460px;
 overflow:hidden;
 background:#111;
 border-radius:30px;
 color:white;
+grid-column:span 6;
 }
-
-.project:nth-child(1){grid-column:span 7}
-.project:nth-child(2){grid-column:span 5}
-.project:nth-child(3){grid-column:span 12}
-.project:nth-child(4){grid-column:span 6}
-.project:nth-child(5){grid-column:span 6}
-.project:nth-child(6){grid-column:span 7}
-.project:nth-child(7){grid-column:span 5}
 
 .project img{
 position:absolute;
@@ -258,7 +267,7 @@ z-index:2;
 
 .project-info h2{
 font-family:'Playfair Display',serif;
-font-size:48px;
+font-size:44px;
 line-height:.92;
 letter-spacing:-2px;
 font-weight:600;
@@ -390,7 +399,7 @@ min-height:420px;
 margin-bottom:22px;
 }
 
-.project-info h2{font-size:38px}
+.project-info h2{font-size:36px}
 
 .contact{
 padding:80px 20px;
@@ -466,10 +475,10 @@ product photography and modern brand communication.
 <h2>Creative Focus</h2>
 
 <div class="selected-list">
-<div>Social Media Design</div>
-<div>Digital Content</div>
-<div>AI Visual Production</div>
-<div>Brand Communication</div>
+<a href="#social-media">Social Media Design</a>
+<a href="#digital-content">Digital Content</a>
+<a href="#ai-visual">AI Visual Production</a>
+<a href="#portfolio">Brand Communication</a>
 </div>
 
 </section>
@@ -485,7 +494,7 @@ digital content productions, AI-supported visuals and creative design systems.
 
 <div class="grid">
 
-<a href="portfolio/sosyal-medya.pdf" target="_blank" class="project">
+<a id="social-media" href="portfolio/sosyal-medya.pdf" target="_blank" class="project">
 <span class="tag">Social Media</span>
 <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=1400&auto=format&fit=crop">
 <div class="project-info">
@@ -494,7 +503,7 @@ digital content productions, AI-supported visuals and creative design systems.
 </div>
 </a>
 
-<a href="portfolio/dijital-icerik.pdf" target="_blank" class="project">
+<a id="digital-content" href="portfolio/dijital-icerik.pdf" target="_blank" class="project">
 <span class="tag">Digital Content</span>
 <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1400&auto=format&fit=crop">
 <div class="project-info">
@@ -503,7 +512,7 @@ digital content productions, AI-supported visuals and creative design systems.
 </div>
 </a>
 
-<a href="portfolio/ai-gorsel-uretim.pdf" target="_blank" class="project">
+<a id="ai-visual" href="portfolio/ai-gorsel-uretim.pdf" target="_blank" class="project">
 <span class="tag">AI Visual</span>
 <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop">
 <div class="project-info">
@@ -564,7 +573,7 @@ Create.
 <a href="#" target="_blank">Instagram</a>
 <a href="#" target="_blank">Behance</a>
 <a href="#" target="_blank">LinkedIn</a>
-<a href="#" target="_blank">CV</a>
+<a href="cv/rumeysa-atilir-cv.pdf" target="_blank">CV</a>
 </div>
 
 </section>
