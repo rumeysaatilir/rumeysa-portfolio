@@ -13,6 +13,69 @@ html{scroll-behavior:smooth}
 body{font-family:'Space Grotesk',sans-serif;background:#f4f0e8;color:#111;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 
+/* INTRO ANIMATION */
+.intro-loader{
+position:fixed;
+inset:0;
+background:#f4f0e8;
+color:#111;
+z-index:9999;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+animation:loaderHide 1s ease forwards;
+animation-delay:3.2s;
+}
+
+.loader-name{
+font-family:'Playfair Display',serif;
+font-size:8vw;
+font-weight:600;
+letter-spacing:-4px;
+opacity:0;
+transform:translateY(40px);
+animation:nameReveal 1.2s ease forwards;
+background:linear-gradient(90deg,#111,#777,#111);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.loader-line{
+width:0;
+height:4px;
+margin:24px 0 14px;
+border-radius:50px;
+background:linear-gradient(90deg,#ff4fd8,#7c5cff,#00d4ff);
+animation:lineReveal 1s ease forwards;
+animation-delay:.8s;
+}
+
+.loader-text{
+font-size:14px;
+letter-spacing:5px;
+text-transform:uppercase;
+opacity:0;
+animation:textReveal 1s ease forwards;
+animation-delay:1.4s;
+}
+
+@keyframes nameReveal{
+to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes lineReveal{
+to{width:280px}
+}
+
+@keyframes textReveal{
+to{opacity:1}
+}
+
+@keyframes loaderHide{
+to{opacity:0;visibility:hidden;pointer-events:none}
+}
+
 header{
 position:fixed;top:0;left:0;width:100%;padding:26px 42px;
 display:flex;justify-content:space-between;align-items:center;z-index:99;
@@ -122,6 +185,10 @@ footer{padding:30px 42px;border-top:1px solid #111;display:flex;justify-content:
 @media(max-width:800px){
 header{padding:20px}.logo{font-size:19px}
 nav a{margin-left:12px;font-size:12px}
+
+.loader-name{font-size:14vw;letter-spacing:-2px}
+.loader-line{max-width:220px}
+
 .hero{padding:120px 20px 50px}
 .hero h1{font-size:18vw;letter-spacing:-4px}
 .marquee{font-size:18px}
@@ -143,6 +210,12 @@ footer{padding:24px 20px;display:block}
 </head>
 
 <body>
+
+<div class="intro-loader">
+  <div class="loader-name">Rümeysa Atılır</div>
+  <div class="loader-line"></div>
+  <div class="loader-text">Graphic Designer</div>
+</div>
 
 <header>
 <div class="logo">Rümeysa Atılır</div>
