@@ -3,80 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Visual Gallery</title>
+<title>AI Visual Portfolio | Rümeysa Atılır</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
-background:#111;
-padding:40px;
+background:#f4f0e8;
+color:#111;
 font-family:Arial,sans-serif;
+padding:40px;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:70px;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+}
+
+.home{
+border:1px solid #111;
+padding:12px 22px;
+border-radius:40px;
+text-decoration:none;
+color:#111;
+transition:.3s;
+}
+
+.home:hover{
+background:#111;
+color:#f4f0e8;
 }
 
 h1{
-color:white;
-text-align:center;
-margin-bottom:40px;
-font-size:48px;
+font-size:64px;
+line-height:.95;
+margin-bottom:18px;
+}
+
+p{
+font-size:20px;
+max-width:720px;
+line-height:1.4;
+margin-bottom:50px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
+gap:24px;
+}
+
+.gallery a{
+background:white;
+border-radius:24px;
+padding:14px;
+height:430px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.gallery a:hover{
+transform:translateY(-6px);
 }
 
 .gallery img{
 width:100%;
-height:320px;
-object-fit:cover;
-border-radius:20px;
-transition:.3s;
-cursor:pointer;
+height:100%;
+object-fit:contain;
+display:block;
 }
 
-.gallery img:hover{
-transform:scale(1.03);
+@media(max-width:800px){
+body{
+padding:24px;
 }
 
+.header{
+margin-bottom:50px;
+}
+
+h1{
+font-size:42px;
+}
+
+p{
+font-size:18px;
+}
+
+.gallery a{
+height:380px;
+}
+}
 </style>
 </head>
+
 <body>
 
-<h1>AI Visual Gallery</h1>
+<div class="header">
+<div class="logo">Rümeysa Atılır</div>
+<a href="../index.html" class="home">← Home</a>
+</div>
+
+<h1>AI Visual<br>Portfolio</h1>
+
+<p>
+Yapay zeka destekli görsel üretim çalışmaları. Her görsele tıklayınca tam boyutu ayrı sekmede açılır.
+</p>
 
 <div class="gallery">
 
-<img src="1.jpg">
-<img src="2.jpg">
-<img src="3.jpg">
-<img src="4.jpeg">
-<img src="5.jpg">
-<img src="6.jpg">
-<img src="7.jpg">
-<img src="8.jpg">
-<img src="9.jpg">
-<img src="10.jpg">
-<img src="11.jpg">
-<img src="12.jpeg">
-<img src="13.jpeg">
-<img src="14.jpeg">
-<img src="15.jpg">
-<img src="16.jpg">
-<img src="17.jpeg">
-<img src="18.jpeg">
-<img src="19.jpg">
-<img src="20.png">
-<img src="21.png">
-<img src="22.jpg">
-<img src="23.jpg">
-<img src="24.jpg">
-<img src="25.jpg">
-<img src="26.jpg">
-<img src="27.jpg">
-<img src="28.jpg">
-<img src="29.jpg">
-<img src="30.jpg">
+<a href="1.jpg" target="_blank"><img src="1.jpg"></a>
+<a href="2.jpg" target="_blank"><img src="2.jpg"></a>
+<a href="3.jpg" target="_blank"><img src="3.jpg"></a>
+<a href="4.jpeg" target="_blank"><img src="4.jpeg"></a>
+<a href="5.jpg" target="_blank"><img src="5.jpg"></a>
+<a href="6.jpg" target="_blank"><img src="6.jpg"></a>
+<a href="7.jpg" target="_blank"><img src="7.jpg"></a>
+<a href="8.jpg" target="_blank"><img src="8.jpg"></a>
+<a href="9.jpg" target="_blank"><img src="9.jpg"></a>
+<a href="10.jpg" target="_blank"><img src="10.jpg"></a>
+<a href="11.jpg" target="_blank"><img src="11.jpg"></a>
+<a href="12.jpeg" target="_blank"><img src="12.jpeg"></a>
+<a href="13.jpeg" target="_blank"><img src="13.jpeg"></a>
+<a href="14.jpeg" target="_blank"><img src="14.jpeg"></a>
+<a href="15.jpg" target="_blank"><img src="15.jpg"></a>
+<a href="16.jpg" target="_blank"><img src="16.jpg"></a>
+<a href="17.jpeg" target="_blank"><img src="17.jpeg"></a>
+<a href="18.jpeg" target="_blank"><img src="18.jpeg"></a>
+<a href="19.jpg" target="_blank"><img src="19.jpg"></a>
+<a href="20.png" target="_blank"><img src="20.png"></a>
+<a href="21.png" target="_blank"><img src="21.png"></a>
+<a href="22.jpg" target="_blank"><img src="22.jpg"></a>
+<a href="23.jpg" target="_blank"><img src="23.jpg"></a>
+<a href="24.jpg" target="_blank"><img src="24.jpg"></a>
+<a href="25.jpg" target="_blank"><img src="25.jpg"></a>
+<a href="26.jpg" target="_blank"><img src="26.jpg"></a>
+<a href="27.jpg" target="_blank"><img src="27.jpg"></a>
+<a href="28.jpg" target="_blank"><img src="28.jpg"></a>
+<a href="29.jpg" target="_blank"><img src="29.jpg"></a>
+<a href="30.jpg" target="_blank"><img src="30.jpg"></a>
 
 </div>
 
