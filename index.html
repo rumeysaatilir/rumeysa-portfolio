@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI Visual Portfolio | Rümeysa Atılır</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Space Grotesk',sans-serif;
@@ -16,12 +21,22 @@ background:#f4f0e8;
 color:#111;
 }
 
+a{
+text-decoration:none;
+color:inherit;
+}
+
 header{
-padding:34px 42px;
+position:sticky;
+top:0;
+background:rgba(244,240,232,.95);
+backdrop-filter:blur(12px);
+padding:28px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 border-bottom:1px solid #111;
+z-index:999;
 }
 
 .logo{
@@ -29,63 +44,59 @@ font-size:22px;
 font-weight:700;
 }
 
-header a{
-font-size:14px;
-text-transform:uppercase;
+.back{
+padding:12px 22px;
 border:1px solid #111;
-border-radius:30px;
-padding:12px 20px;
-text-decoration:none;
-color:#111;
+border-radius:40px;
 transition:.3s;
 }
 
-header a:hover{
+.back:hover{
 background:#111;
 color:#f4f0e8;
 }
 
 .hero{
-padding:90px 42px 60px;
+padding:90px 40px 60px;
 }
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:9vw;
+font-size:8vw;
 line-height:.85;
-letter-spacing:-5px;
+letter-spacing:-4px;
 }
 
 .hero p{
 font-size:22px;
-max-width:760px;
-line-height:1.35;
-margin-top:28px;
+max-width:800px;
+margin-top:24px;
+line-height:1.5;
 }
 
 .gallery{
-padding:30px 42px 120px;
+padding:0 40px 120px;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:26px;
+gap:24px;
 }
 
 .item{
-height:430px;
-background:#fffaf0;
-border:1px solid rgba(17,17,17,.18);
+background:#fff;
 border-radius:28px;
-padding:16px;
+padding:15px;
+height:420px;
 display:flex;
 align-items:center;
 justify-content:center;
+border:1px solid rgba(0,0,0,.08);
 overflow:hidden;
-transition:.3s;
+transition:.35s;
 }
 
 .item:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 45px rgba(0,0,0,.13);
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(0,0,0,.12);
 }
 
 .item img{
@@ -96,35 +107,33 @@ display:block;
 }
 
 footer{
-padding:30px 42px;
+padding:30px 40px;
 border-top:1px solid #111;
+font-size:14px;
 display:flex;
 justify-content:space-between;
-font-size:14px;
 }
 
-@media(max-width:800px){
+@media(max-width:900px){
 header{
-padding:24px 20px;
+padding:20px;
 }
 
 .hero{
-padding:70px 20px 40px;
+padding:60px 20px 40px;
 }
 
 .hero h1{
-font-size:17vw;
-letter-spacing:-3px;
+font-size:15vw;
 }
 
 .hero p{
-font-size:19px;
+font-size:18px;
 }
 
 .gallery{
-padding:20px 20px 80px;
+padding:0 20px 80px;
 grid-template-columns:1fr;
-gap:22px;
 }
 
 .item{
@@ -132,7 +141,7 @@ height:420px;
 }
 
 footer{
-padding:24px 20px;
+padding:20px;
 display:block;
 }
 }
@@ -143,57 +152,40 @@ display:block;
 
 <header>
 <div class="logo">Rümeysa Atılır</div>
-<a href="index.html">Back to Home</a>
+<a href="index.html" class="back">← Home</a>
 </header>
 
 <section class="hero">
 <h1>AI Visual<br>Portfolio</h1>
 <p>
-Yapay zeka destekli görsel üretim çalışmaları. Görseller kırpılmadan kendi gerçek oranlarında gösterilir. Her görsele tıklayınca tam boyutu ayrı sekmede açılır.
+Artificial Intelligence supported visual design works.
+Click any image to open the full-size original version.
 </p>
 </section>
 
-<section class="gallery">
-
-<a href="ai-visual-01.jpg" target="_blank" class="item"><img src="ai-visual-01.jpg" alt="AI Visual 01"></a>
-<a href="ai-visual-02.jpg" target="_blank" class="item"><img src="ai-visual-02.jpg" alt="AI Visual 02"></a>
-<a href="ai-visual-03.jpg" target="_blank" class="item"><img src="ai-visual-03.jpg" alt="AI Visual 03"></a>
-<a href="ai-visual-04.jpg" target="_blank" class="item"><img src="ai-visual-04.jpg" alt="AI Visual 04"></a>
-<a href="ai-visual-05.jpg" target="_blank" class="item"><img src="ai-visual-05.jpg" alt="AI Visual 05"></a>
-<a href="ai-visual-06.jpg" target="_blank" class="item"><img src="ai-visual-06.jpg" alt="AI Visual 06"></a>
-<a href="ai-visual-07.jpg" target="_blank" class="item"><img src="ai-visual-07.jpg" alt="AI Visual 07"></a>
-<a href="ai-visual-08.jpg" target="_blank" class="item"><img src="ai-visual-08.jpg" alt="AI Visual 08"></a>
-<a href="ai-visual-09.jpg" target="_blank" class="item"><img src="ai-visual-09.jpg" alt="AI Visual 09"></a>
-<a href="ai-visual-10.jpg" target="_blank" class="item"><img src="ai-visual-10.jpg" alt="AI Visual 10"></a>
-
-<a href="ai-visual-11.jpg" target="_blank" class="item"><img src="ai-visual-11.jpg" alt="AI Visual 11"></a>
-<a href="ai-visual-12.jpg" target="_blank" class="item"><img src="ai-visual-12.jpg" alt="AI Visual 12"></a>
-<a href="ai-visual-13.jpg" target="_blank" class="item"><img src="ai-visual-13.jpg" alt="AI Visual 13"></a>
-<a href="ai-visual-14.jpg" target="_blank" class="item"><img src="ai-visual-14.jpg" alt="AI Visual 14"></a>
-<a href="ai-visual-15.jpg" target="_blank" class="item"><img src="ai-visual-15.jpg" alt="AI Visual 15"></a>
-<a href="ai-visual-16.jpg" target="_blank" class="item"><img src="ai-visual-16.jpg" alt="AI Visual 16"></a>
-<a href="ai-visual-17.jpg" target="_blank" class="item"><img src="ai-visual-17.jpg" alt="AI Visual 17"></a>
-<a href="ai-visual-18.jpg" target="_blank" class="item"><img src="ai-visual-18.jpg" alt="AI Visual 18"></a>
-<a href="ai-visual-19.jpg" target="_blank" class="item"><img src="ai-visual-19.jpg" alt="AI Visual 19"></a>
-<a href="ai-visual-20.jpg" target="_blank" class="item"><img src="ai-visual-20.jpg" alt="AI Visual 20"></a>
-
-<a href="ai-visual-21.jpg" target="_blank" class="item"><img src="ai-visual-21.jpg" alt="AI Visual 21"></a>
-<a href="ai-visual-22.jpg" target="_blank" class="item"><img src="ai-visual-22.jpg" alt="AI Visual 22"></a>
-<a href="ai-visual-23.jpg" target="_blank" class="item"><img src="ai-visual-23.jpg" alt="AI Visual 23"></a>
-<a href="ai-visual-24.jpg" target="_blank" class="item"><img src="ai-visual-24.jpg" alt="AI Visual 24"></a>
-<a href="ai-visual-25.jpg" target="_blank" class="item"><img src="ai-visual-25.jpg" alt="AI Visual 25"></a>
-<a href="ai-visual-26.jpg" target="_blank" class="item"><img src="ai-visual-26.jpg" alt="AI Visual 26"></a>
-<a href="ai-visual-27.jpg" target="_blank" class="item"><img src="ai-visual-27.jpg" alt="AI Visual 27"></a>
-<a href="ai-visual-28.jpg" target="_blank" class="item"><img src="ai-visual-28.jpg" alt="AI Visual 28"></a>
-<a href="ai-visual-29.jpg" target="_blank" class="item"><img src="ai-visual-29.jpg" alt="AI Visual 29"></a>
-<a href="ai-visual-30.jpg" target="_blank" class="item"><img src="ai-visual-30.jpg" alt="AI Visual 30"></a>
-
-</section>
+<section class="gallery" id="gallery"></section>
 
 <footer>
 <span>© 2026 Rümeysa Atılır</span>
 <span>AI Visual Portfolio</span>
 </footer>
+
+<script>
+const gallery = document.getElementById("gallery");
+
+for(let i = 1; i <= 30; i++){
+const item = document.createElement("a");
+item.href = `ai-visual/${i}.jpg`;
+item.target = "_blank";
+item.className = "item";
+
+item.innerHTML = `
+<img src="ai-visual/${i}.jpg" alt="AI Visual ${i}">
+`;
+
+gallery.appendChild(item);
+}
+</script>
 
 </body>
 </html>
